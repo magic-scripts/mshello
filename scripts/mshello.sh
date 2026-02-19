@@ -8,7 +8,9 @@ VERSION="0.1.0"
 SCRIPT_NAME="mshello"
 
 show_help() {
-    echo "$SCRIPT_NAME v${MS_INSTALLED_VERSION:-$VERSION}"
+    _ver="${MS_INSTALLED_VERSION:-$VERSION}"
+    [ "$_ver" = "dev" ] && _ver_fmt="$_ver" || _ver_fmt="v${_ver}"
+    echo "$SCRIPT_NAME ${_ver_fmt}"
     echo "Hello World example for Magic Scripts"
     echo ""
     echo "Usage:"
@@ -22,7 +24,12 @@ show_help() {
 }
 
 show_version() {
-    echo "$SCRIPT_NAME v${MS_INSTALLED_VERSION:-$VERSION}"
+    _ver="${MS_INSTALLED_VERSION:-$VERSION}"
+    if [ "$_ver" = "dev" ]; then
+        echo "$SCRIPT_NAME $_ver"
+    else
+        echo "$SCRIPT_NAME v$_ver"
+    fi
 }
 
 case "$1" in
