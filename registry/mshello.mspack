@@ -1,0 +1,20 @@
+# mshello.mspack - Package Manifest
+# Format: type|field1|field2|...
+
+# Package metadata
+name|mshello
+description|Hello World example for Magic Scripts
+author|nulLeeKH <nulleekh@gmail.com>
+license|MIT
+license_url|https://github.com/magic-scripts/mshello/blob/main/LICENSE
+repo_url|https://github.com/magic-scripts/mshello
+issues_url|https://github.com/magic-scripts/mshello/issues
+category|utility
+stability|beta
+min_ms_version|0.0.1
+
+# Version file link
+msver_url|https://raw.githubusercontent.com/magic-scripts/mshello/main/registry/mshello.msver
+
+# Configuration keys
+config|MSHELLO_OPTION|default|Default option value|settings|mshello
