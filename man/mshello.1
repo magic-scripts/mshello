@@ -1,0 +1,40 @@
+.TH MSHELLO 1 "February 2026" "mshello 0.1.0" "User Commands"
+.SH NAME
+mshello \- Hello World example for Magic Scripts
+.SH SYNOPSIS
+.B mshello
+[\fINAME\fR]
+.br
+.B mshello
+[\fB\-h\fR|\fB\-\-help\fR|\fB\-v\fR|\fB\-\-version\fR]
+.SH DESCRIPTION
+.B mshello
+is the simplest possible Magic Scripts command.
+It prints a greeting to standard output.
+.PP
+Use it as a reference when building your own Magic Scripts commands.
+See the source at
+.I scripts/mshello.sh
+for a minimal working example.
+.SH OPTIONS
+.TP
+.B \fINAME\fR
+Optional name to greet. Defaults to
+.BR World .
+.TP
+.B \-h, \-\-help
+Show help message and exit.
+.TP
+.B \-v, \-\-version
+Show version information and exit.
+.SH EXAMPLES
+.TP
+Default greeting:
+.B mshello
+.TP
+Custom greeting:
+.B mshello Alice
+.SH SEE ALSO
+.BR ms (1)
+.SH AUTHOR
+nulLeeKH <nulleekh@gmail.com>

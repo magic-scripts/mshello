@@ -1,6 +1,8 @@
 #!/bin/sh
-
-# mshello - Magic Scripts command
+# mshello - Hello World example for Magic Scripts
+#
+# This is the simplest possible Magic Scripts command.
+# Use it as a reference when building your own commands.
 
 VERSION="0.1.0"
 SCRIPT_NAME="mshello"
@@ -10,9 +12,13 @@ show_help() {
     echo "Hello World example for Magic Scripts"
     echo ""
     echo "Usage:"
-    echo "  $SCRIPT_NAME              Run the command"
-    echo "  $SCRIPT_NAME --help       Show this help message"
-    echo "  $SCRIPT_NAME --version    Show version information"
+    echo "  $SCRIPT_NAME [name]      Print a greeting"
+    echo "  $SCRIPT_NAME --help      Show this help message"
+    echo "  $SCRIPT_NAME --version   Show version information"
+    echo ""
+    echo "Examples:"
+    echo "  $SCRIPT_NAME"
+    echo "  $SCRIPT_NAME World"
 }
 
 show_version() {
@@ -28,6 +34,10 @@ case "$1" in
         show_version
         exit 0
         ;;
+    "")
+        echo "Hello, World!"
+        ;;
+    *)
+        echo "Hello, $1!"
+        ;;
 esac
-
-echo "Hello from mshello!"
